@@ -1,0 +1,88 @@
+@import "../../../sass/Main//varibles.scss";
+
+section.chart {
+  margin: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: $white;
+  padding: 1rem 0 0;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px $subtitle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  z-index: 1;
+  .leg {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 1rem 1rem;
+    ul {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: disc;
+      li {
+        position: relative;
+        display: flex;
+        p {
+          color: $subtitle;
+          font-size: 12px;
+          font-weight: 600;
+        }
+        @for $i from 1 through 2 {
+          &:nth-child(#{$i}) {
+            &:before {
+              position: absolute;
+              content: "";
+              width: 10px;
+              height: 10px;
+              left: -26px;
+              top: 0;
+              bottom: 0;
+              margin: auto 0;
+              border-radius: 50%;
+              @if $i == 1 {
+                background-color: $redTag;
+              } @else {
+                background-color: $greenTag;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .data {
+    width: 100%;
+    position: relative;
+
+    .dataRes {
+      display: flex;
+      bottom: 1rem;
+      left: 4rem;
+      position: absolute;
+      gap: 12px;
+      p {
+        font-weight: 600;
+        color: $title;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        left: -26px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        border-radius: 50%;
+        @include gradientbitcoid;
+        box-shadow: 0px 0px 6px 2px #ff961d;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+/* BITCOIN Colors:*/
+/* gradient 1 #ffc03d*/
+/* gradient 2 #ff961d*/
+
+$background: #f2f5f8;
+$selected: #fafbfb;
+$white: #fff;
+$title: #4c5968;
+$subtitle: #aeb8c4;
+$redTag: #ee225d;
+$greenTag: #1ec070;
+$lightblue: #18b8fa;
+$blue: #1c81f3;
+$lightpink: #fe5c83;
+$pink: #fb3aa4;
+
+@mixin gradientbitcoid {
+  background: linear-gradient(to bottom, #ffc03d, #ff961d);
+}
+
+@mixin gradRed {
+  background: linear-gradient(to bottom, $lightpink, $pink);
+}
+@mixin gradBlue {
+  background: linear-gradient(to bottom, $lightblue, $blue);
+}

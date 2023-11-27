@@ -1,0 +1,22 @@
+@import "./reset.scss";
+@import "./varibles.scss";
+@include reset-css;
+
+@font-face {
+  font-family: SpPro;
+  src: url("../../Assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf")
+    format("truetype");
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: "SpPro", sans-serif;
+  }
+}
+p,
+a,
+div,
+span,
+li {
+  font-family: "SpPro", sans-serif;
+}

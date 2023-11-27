@@ -1,0 +1,17 @@
+@import "../../../sass/Main/varibles.scss";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $white;
+  align-items: center;
+  vertical-align: middle;
+  padding: 1.5rem;
+  position: relative;
+  h1 {
+    font-size: 2rem;
+    color: $title;
+    font-weight: 600;
+  }
+
+}
